@@ -38,6 +38,8 @@ public class ContactController {
 
     @GetMapping("form")
     public String contactForm(Model model) {
+        String str=null;
+        System.out.println(str.toString());
         return "contact";
     }
 
