@@ -17,6 +17,13 @@
 
     <mvc:resources mapping="/resources/**" location="/WEB-INF/resources/"></mvc:resources>
 
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/user/**"/>
+            <bean class="com.springmvc.interceptors.MyInterceptor" />
+            </mvc:interceptor>
+    </mvc:interceptors>
+
     <context:component-scan base-package="com.springmvc" />
     <!-- Enable JPA repositories -->
     <jpa:repositories base-package="com.springmvc.repository" />
